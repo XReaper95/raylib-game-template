@@ -1,18 +1,48 @@
-# External libraries
+## cimgui
 
-This is similar to how Godot handles dependencies, they should be embedded, and documented
-following the template. Cmake integration should be done in a file named `<dependency_name.cmake>`,
-that lives at `<project_root>/cmake/dependencies`. For consistency, `dependency_name` should match
-the name of the top level folder here.
-
-## example_library (library name)
-
-- Description: A small description for the library.
-- Upstream: GitHub/Gitlab/Codeberg link, if any.
-- Version: branch, tag or any identifier (git commit hash here, this is the most important part)
-- License: name of the license (i.e `MIT`)
-- Updated: `dd/mm/YYYY` (last time this dependency was manually updated)
+- Description: C-API for Dear ImgGui.
+- Upstream: https://github.com/cimgui/cimgui
+- Version: branch `docking_inter` (205107640d70aeffc9cd37a1e7a8d240708a55e5)
+- License: `MIT`
+- Updated: `07/04/2025`
 - Files extracted from upstream:
-    - A list of files extracted from the dependency repository, since dependencies
-      are embedded, it's better to bring only required files, this should be tested
-      thoroughly, as dependencies can break in many ways if this is done.
+    - `imgui (git module extracted at 4806a19)`
+    - `imgui/*.cpp`
+    - `imgui/*.h`
+    - `imgui/LICENSE.txt`
+    - `*.cpp`
+    - `*.h`
+    - `CMakeLists.txt`
+    - `LICENSE`
+
+## raylib
+
+- Description: Platform layer library and OpenGL renderer.
+- Upstream: https://github.com/raysan5/raylib/
+- Version: `5.5` (c1ab645ca298a2801097931d1079b10ff7eb9df8)
+- License: `zlib`
+- Updated: `07/04/2025`
+- Files extracted from upstream:
+    - `cmake/**/*`
+    - `src/external/**/*`
+    - `src/platforms/*.c`
+    - `src/*.c`
+    - `src/*.h`
+    - `src/CMakeLists.txt`
+    - `CMakeLists.txt`
+    - `CMakeOptions.txt`
+    - `LICENSE`
+
+## rlImGui
+
+- Description: Raylib integration for ImGui/cimgui.
+- Upstream: https://github.com/raylib-extras/rlImGui
+- Version: branch `main` (aba659ea01d7c641b9cb2613e5183077a2df1d5c)
+- License: `zlib`
+- Updated: `07/04/2025`
+- Files extracted from upstream:
+    - `extras/**/*`
+    - `imgui_impl_raylib.h`
+    - `rlImGui.cpp`
+    - `rlImGui.h`
+    - `LICENSE`
